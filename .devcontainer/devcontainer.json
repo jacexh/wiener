@@ -13,7 +13,7 @@
 	},
 
 	"remoteEnv": {
-		"PIP_INDEX_URL": "https://mirrors.aliyun.com/pypi/simple"
+		"PIP_INDEX_URL": "https://pypi.tuna.tsinghua.edu.cn/simple/"
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -22,7 +22,7 @@
 	"onCreateCommand": "pipx install poetry",
 	
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "poetry install",
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -33,6 +33,7 @@
 				"terminal.integrated.defaultProfile.windows": "zsh",
 				"python.languageServer": "Pylance",
 				"python.poetryPath": "/usr/local/py-utils/bin/poetry",
+				"python.terminal.activateEnvironment": true,
 				"python.analysis.diagnosticMode": "workspace",
 				"python.analysis.typeCheckingMode": "strict",
 				"python.analysis.completeFunctionParens": true,
