@@ -2,14 +2,15 @@
 
 import unittest
 
-from wiener.plugins.metadata import metadata
+from wiener.plugins.tags import testcase
 
 
 class TestExample(unittest.TestCase):
+    @testcase.regression
     def test_001(self):
         pass
 
-    @metadata.smoke
+    @testcase.smoke
     def test_002(self):
         pass
 
