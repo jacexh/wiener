@@ -19,7 +19,7 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	
-	"onCreateCommand": "pipx install poetry",
+	"onCreateCommand": "pipx install poetry; pipx inject poetry \"poetry-dynamic-versioning[plugin]\"",
 	
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "poetry install",
